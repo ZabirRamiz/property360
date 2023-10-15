@@ -68,8 +68,6 @@ def createProp(n):
         return "prop_"+str(n)
 
 
-
-
 def createAuct(n):
     s = ''
     # print("/////////////////////createprop///////////////////")
@@ -1483,8 +1481,6 @@ def delete_property(request):
         password = request.POST['password']
         retrieve_password = 'select password from website_user where user_id = %s'
         confirm_password = ''
-        retrieve_hired = 'select property_id_id, support_id_id from website_hires where user_id_id = %s and property_id_id =%s'
-        check_hired = ''
         with connection.cursor() as cursor:
             cursor.execute(retrieve_password, [user])
             confirm_password = tuple(cursor)[0][0]
