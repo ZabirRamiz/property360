@@ -68,11 +68,6 @@ def createProp(n):
         return "prop_"+str(n)
 
 
-def createAuct1(n):
-    if len(str(n)) < 4:
-        return ("auct_"+("0"*(4-len(str(n)))) + str(n))
-    else:
-        return "auct_"+str(n)
 
 
 def createAuct(n):
